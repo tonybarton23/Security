@@ -1,12 +1,25 @@
 import pysftp
 import getpass
 import subprocess
+import import_file
 
-def menu():
+def main_menu():
     print("1) Import File")
-    main_menu_input = input("Please choose an option: ")
+    print("q) Quit")
+    mainMenuInput = input("Please choose an option: ")
+    match mainMenuInput:
+    #Option 1 Import File
+        case "1":
+            import_file.import_file_menu()
+    #Option 2
+    #Last Option
+        case "q":
+            exit
+    return mainMenuInput
 
 def main():
-    menu()
+    main_menu()
+    
+    
 
 main()

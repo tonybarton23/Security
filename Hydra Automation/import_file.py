@@ -1,8 +1,6 @@
 import pysftp
 import getpass
-
-def import_file_options():
-    print("1) SFTP")
+import main
 
 def connect_sftp():
     hostname = input("Enter Hostname: ")
@@ -16,3 +14,17 @@ def connect_sftp():
         print(f"Connection Error: {e}")
     except IOError as e:
         print(f"File operation error: {e}")
+
+def import_file_menu():
+    print("1) SFTP")
+    print("2) HTTP")
+    print("q) Go Back")
+    importFileSelection = input("Please Select an Option: ")
+    match importFileSelection:
+        case "1":
+            connect_sftp()
+        case "q":
+            print("Testing")
+            main.main_menu()
+
+

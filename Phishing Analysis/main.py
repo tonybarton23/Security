@@ -12,7 +12,6 @@ class Email:
         self.toAddress
         self.subject
 
-
 def find_ipv4(text):
     ipv4_pattern = r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
     return re.findall(ipv4_pattern, text)
