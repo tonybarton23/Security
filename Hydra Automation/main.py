@@ -2,7 +2,7 @@ import pysftp
 import getpass
 import subprocess
 
-hostname = "columbo"
+hostname = input("Enter Hostname: ")
 username = input("Username: ")
 password = getpass.getpass("Password: ")
 
